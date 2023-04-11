@@ -87,10 +87,11 @@
 
    
     async function fetchData() {
-        const response = await fetch('fetch_data.php');
-        const data = await response.json();
-        return data.records;
+  	const response = await fetch('airtable.js');
+ 	const data = await response.json();
+  	return data.records;
     }
+
 
     async function createSlides() {
         const records = await fetchData();
