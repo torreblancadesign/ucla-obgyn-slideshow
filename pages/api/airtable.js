@@ -4,7 +4,7 @@ import nextConnect from 'next-connect';
 const apiKey = process.env.AIRTABLE_API_KEY;
 const baseId = 'appB6PVySBlUkfh3M';
 const tableName = encodeURIComponent('Topics');
-const fields = encodeURIComponent('fields[]=Topic&fields[]=Title&fields[]=Content');
+const fields = 'fields[]=Topic&fields[]=Content';
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}?${fields}`;
 
 const handler = nextConnect()
