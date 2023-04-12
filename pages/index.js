@@ -7,17 +7,17 @@ const IndexPage = () => {
   const [slideTimer, setSlideTimer] = useState(0);
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await fetchData();
-      if (Array.isArray(data)) {
-        setSlides(data);
-      } else {
-        console.error('Fetched data is not an array:', data);
-      }
-    };
+  const getData = async () => {
+    const data = await fetchData();
+    if (Array.isArray(data)) {
+      setSlides(data);
+    } else {
+      console.error('Fetched data is not an array:', data);
+    }
+  };
 
-    getData();
-  }, []);
+  getData();
+}, []);
 
   useEffect(() => {
     if (slides.length > 0) {
