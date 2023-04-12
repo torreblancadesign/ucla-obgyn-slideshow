@@ -9,7 +9,11 @@ const IndexPage = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await fetchData();
-      setSlides(data);
+      if (Array.isArray(data)) {
+        setSlides(data);
+      } else {
+        console.error('Fetched data is not an array:', data);
+      }
     };
 
     getData();
