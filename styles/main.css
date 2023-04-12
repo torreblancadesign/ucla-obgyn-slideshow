@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-image: url('https://www.uclahealth.org/sites/default/files/images/02-UCLA-03-34-DGSOM-Zoom-Screens-1920pxx1080px-Oct-20202.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.slideshow-container {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slide-content {
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.timer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+}
