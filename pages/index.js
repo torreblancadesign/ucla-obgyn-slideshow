@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import fetchData from '../scripts/slideshow';
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 const IndexPage = () => {
   const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,7 +18,7 @@ const IndexPage = () => {
   const getData = async () => {
     const data = await fetchData();
     if (Array.isArray(data)) {
-      setSlides(data);
+      setSlides(shuffleArray(data));
     } else {
       console.error('Fetched data is not an array:', data);
     }
