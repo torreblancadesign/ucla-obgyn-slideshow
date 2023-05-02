@@ -58,7 +58,7 @@ const IndexPage = () => {
           <h2 className="slide-title">{slide.fields.Topic}</h2>
           <div
             className="slide-content"
-            dangerouslySetInnerHTML={{ __html: slide.fields.Content_html }}
+            dangerouslySetInnerHTML={{ __html: slide.fields.Content }}
           ></div>
         </div>
       ))}
