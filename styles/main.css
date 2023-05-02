@@ -47,3 +47,10 @@ body {
   left: 10px;
   font-size: 1.5rem;
 }
+.qr-code {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+}
