@@ -60,7 +60,7 @@ const IndexPage = () => {
             className="slide-content"
             dangerouslySetInnerHTML={{ __html: slide.fields.Content }}
           ></div>
-          <img className="qr-code" src={qrCode[0].url} alt="QR code" />
+          <img className="qr-code" src={slide.fields.QRcode[0].url} alt="QR code" />
         </div>
       ))}
       <div className="timer">{slideTimer}s</div>
